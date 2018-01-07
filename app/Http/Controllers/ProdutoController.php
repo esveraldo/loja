@@ -22,8 +22,15 @@ class ProdutoController extends Controller
 
     public function list()
     {
+      if(\Auth::check()){
+        $user = \Auth::user();
+      }else{
+        $user = ['name' => 'Visitante'];
+        $user = (Object) $user;
+      }
+
       $produtos = Produto::all();
-      return view('produtos.list', ['produtos' => $produtos]);
+      return view('produtos.list', ['produtos' => $produtos, 'user' => $user]);
     }
 
     public function show($id)

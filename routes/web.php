@@ -11,12 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-
-//Route::get('/produtos', 'ProdutoController@index');
+Route::get('/', 'ProdutoController@index');
 Route::get('produtos', 'ProdutoController@index');
 Route::get('produtos/list', 'ProdutoController@list');
 Route::get('produtos/details/{id}', 'ProdutoController@show');

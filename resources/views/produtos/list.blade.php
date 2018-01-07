@@ -1,9 +1,8 @@
-@extends('layouts.produtos')
+@extends('layouts.app')
 
 @section('title', 'Listagem de produtos')
 
 @section('content')
-
 <h2>Listagem de produtos</h2>
 <table class="table table-bordered">
   <thead>

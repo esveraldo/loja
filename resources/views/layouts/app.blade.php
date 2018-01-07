@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
     <div id="app">
@@ -36,7 +37,8 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li><a href="{{ url('/') }}">Listagem de produtos</a></li>
+                        <li><a href="{{ route('register') }}">Register</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -44,7 +46,6 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -70,8 +71,11 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
+        <div class="container">
+          <div class="row">
+            @yield('content')
+          </div>
+        </div>
     </div>
 
     <!-- Scripts -->
