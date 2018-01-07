@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://teste-esveraldo.herokuapp.com/'),
 
     /*
     |--------------------------------------------------------------------------
@@ -103,7 +103,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
+    'key' => env('APP_KEY', 'base64:EmQTbnJKORnJWIyvsq5S57T3SNO56/4B1MJFoE7V5NU='),
 
     'cipher' => 'AES-256-CBC',
 
