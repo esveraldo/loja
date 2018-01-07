@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use loja\User;
 
 class CreateUsersTable extends Migration
 {
@@ -22,12 +21,6 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-        User::create([
-          'name' => 'Administrador',
-          'email' => 'admin@user.com',
-          'password' => 'secret'
-        ]);
     }
 
     /**
