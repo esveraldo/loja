@@ -38,6 +38,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/') }}">Listagem de produtos</a></li>
+                        <li><a href="{{ url('produtos/new') }}">Novo produto</a></li>
                         <li><a href="{{ route('register') }}">Register</a></li>
                     </ul>
 
